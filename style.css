@@ -1,19 +1,146 @@
 * {
     padding: 0;
-    margin: 0;
+    margin: 2px;
     font-family: sans-serif;
     color: white;
   }
+
+   .container{
+    display: grid;
+    height: 70vh;
+    align-items: stretch;
+    grid-template-columns: 200px 800px 200px;
+    gap: 0.6%;
+  }
+
   
   #item-1 {
+    display: grid;
     background-color: steelblue;
+    border-radius: 5px;
+    padding: 5px;
+    order: 1;
+    font-size: 25px;
+    justify-content: center;
+    padding-top: 20%;
   }
   
   #item-2 {
+    display: grid;
     background-color: #fe7e02;
+    border-radius: 5px;
+    padding: 5px;
+    order: 0;
+    font-size: 25px;
+    text-align: center;
+    align-items: center;
   }
   
   #item-3 {
+    display: grid;
     background-color: #45525b;
+    border-radius: 5px;
+    padding: 5px;
+    order: 1;
+    font-size: 25px;
+    text-align: center;
+    align-items: center;
   }
   
+  @media screen and (min-device-width : 801px) and (max-device-width : 1199px)
+{
+  .container{
+    display: grid;
+    height: 70vh;
+    align-items: stretch;
+    grid-template-columns: 800px 200px ;
+    grid-template-rows: 80vh;
+    gap: 0.6%;
+  }
+
+  
+  #item-1 {
+    display: grid;
+    background-color: steelblue;
+    border-radius: 5px;
+    padding: 5px;
+    order: 0;
+    font-size: 25px;
+    justify-content: center;
+    padding-top: 20%;
+    
+  }
+  
+  #item-2 {
+    display: grid;
+    background-color: #fe7e02;
+    border-radius: 5px;
+    padding: 5px;
+    order: 1;
+    font-size: 25px;
+    justify-content: center;
+    align-items: center;
+    grid-row:2/2;
+    grid-column: 1/span2;
+    height: 9rem;
+    max-width: 995px;
+  }
+  
+  #item-3 {
+    display: grid;
+    background-color: #45525b;
+    border-radius: 5px;
+    padding: 5px;
+    order: 0;
+    font-size: 25px;
+    justify-items: center;
+    align-items: center;
+  }
+} 
+
+@media screen and (max-device-width : 800px)
+{
+  .container{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.6%;
+  }
+
+  
+  #item-1 {
+    display: grid;
+    background-color: steelblue;
+    border-radius: 5px;
+    padding: 5px;
+    order: 0;
+    font-size: 25px;
+    padding-top: 20%;
+    grid-column: 1/span2;
+    max-width: 98%;
+  }
+  
+  #item-2 {
+    display: grid;
+    background-color: #fe7e02;
+    border-radius: 5px;
+    padding: 5px;
+    order: 1;
+    font-size: 25px;
+    width: 97%;
+    grid-row: 2;
+  }
+  
+  #item-3 {
+    display: grid;
+    background-color: #45525b;
+    border-radius: 5px;
+    padding: 5px;
+    order: 2;
+    font-size: 25px;
+    justify-content: center;
+    align-items: center;
+    width: 97%;
+    grid-row: 2;
+  }
+}
